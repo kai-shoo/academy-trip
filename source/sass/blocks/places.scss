@@ -1,0 +1,66 @@
+.places {
+}
+.places__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (max-width: $desktop) {
+    align-items: center;
+  }
+}
+.places__title {
+  max-width: 360px;
+
+  margin: 0 0 5px 0;
+
+  &::after {
+    width: 230px;
+    height: 4px;
+    margin: 30px 0;
+    @media (max-width: $desktop) {
+      content: none;
+    }
+  }
+
+  @media (max-width: $desktop) {
+    margin-bottom: 20px;
+  }
+}
+.places__desc {
+  max-width: 350px;
+  margin: 0 0 56px 0;
+
+  line-height: 28px;
+  letter-spacing: -0.466667px;
+  color: rgba($dark, 0.7);
+
+  @media (max-width: $desktop) {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 15px;
+  }
+}
+.places_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+  column-gap: 30px;
+  row-gap: 100px;
+
+  list-style: none;
+
+  @media (max-width: $desktop) {
+    row-gap: 20px;
+    padding: 0 60px;
+  }
+
+  @media (max-width: $tablet) {
+    row-gap: 35px;
+  }
+}

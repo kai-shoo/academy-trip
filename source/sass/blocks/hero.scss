@@ -1,0 +1,158 @@
+.hero {
+  position: relative;
+
+  display: flex;
+  min-height: 860px;
+
+  @media (max-width: $desktop) {
+    min-height: 344px;
+  }
+
+  @media (max-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    min-height: auto;
+  }
+}
+
+.hero__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  justify-content: center;
+  column-gap: 235px;
+  max-width: 1220px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+  color: white;
+
+  z-index: 1;
+
+  margin-top: -130px;
+
+  @media (max-width: $desktop) {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    column-gap: 0;
+  }
+
+  @media (max-width: $tablet) {
+    display: contents;
+
+    padding: 0 16px;
+  }
+}
+
+.hero__wrapper > * {
+  grid-column: 2;
+
+  @media (max-width: $desktop) {
+    grid-column: auto;
+  }
+}
+
+.hero__image {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+
+  background: radial-gradient(
+    ellipse 100% 100% at right center,
+    grey 50%,
+    white
+  );
+
+  object-fit: cover;
+
+  @media (max-width: $tablet) {
+    position: static;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    order: -1;
+    height: 235px;
+  }
+}
+
+.hero__title {
+  margin: 0;
+  margin-bottom: 30px;
+  width: 410px;
+
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 80px;
+  letter-spacing: -1.10667px;
+
+  @media (max-width: $desktop) {
+    font-size: 30px;
+    line-height: 150%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 150%;
+    letter-spacing: normal;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  @media (max-width: $tablet) {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    align-self: center;
+    width: 90%;
+
+    margin-top: 15px;
+    font-size: 24px;
+  }
+}
+
+.hero__desc {
+  margin: 0 0 10px 0;
+
+  font-size: 16px;
+  line-height: 170%;
+  letter-spacing: -0.466667px;
+
+  width: 350px;
+
+  @media (max-width: $desktop) {
+    text-align: center;
+    width: 400px;
+  }
+
+  @media (max-width: $tablet) {
+    color: $dark;
+    margin: 20px 0;
+    width: auto;
+  }
+}
+
+.hero__desc,
+.hero__button {
+  @media (max-width: $desktop) {
+  }
+}
+
+.hero__button {
+  width: 340px;
+
+  @media (max-width: $desktop) {
+    width: 250px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 288px;
+  }
+}
